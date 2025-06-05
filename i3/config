@@ -256,7 +256,7 @@ client.urgent           #bf616a #bf616a #eceff4 #bf616a    #bf616a # nord11 bord
 #volume
 exec --no-startup-id pasystray
 
-# apps
+#### apps ####
 
 #thunar
 bindsym ctrl+mod1+f exec pcmanfm
@@ -274,10 +274,19 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id dunst
 
 # lock sreen
-bindsym ctrl+mod1+l exec betterlockscreen -l 
+bindsym ctrl+mod1+l exec betterlockscreen -l dimblur
+
+#screen shoot app
+bindsym Mod4+Shift+Print exec --no-startup-id flameshot gui
+
+
+#### end off apps  ####
+
+#### arand script for hdmi ####
+exec --no-startup-id ~/.screenlayout/screen.sh
 
 # swith workspace depending on app
-for_window [class="firefox"] move to workspace $ws2
+#for_window [class="firefox"] move to workspace $ws2
 for_window [class="Geany"] move to workspace $ws3
 
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
